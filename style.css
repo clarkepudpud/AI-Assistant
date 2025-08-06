@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.main-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #334155;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background: #475569;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+}
+
+.chat-container h1 {
+  margin-top: 0;
+}
+
+.chatbox {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #fefefe;
+  display: flex;               /* ito ang importante */
+  flex-direction: column;      /* para vertical layout */
+  gap: 10px;                   /* dagdag space bawat message */
+}
+
+.chat-bubble {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.chat-bubble.user {
+  background: #dcf8c6;
+  align-self: flex-end;      /* pumunta sa kanan */
+  text-align: right;         /* text right-align din */
+  border-bottom-right-radius: 0;
+}
+
+.chat-bubble.bot {
+  background: #e5e5ea;
+  align-self: flex-start;    /* pumunta sa kaliwa */
+  text-align: left;
+  border-bottom-left-radius: 0;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-up-btn {
+  margin: 5px 5px 0 0;
+  padding: 6px 10px;
+  background: #cbd5e1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
