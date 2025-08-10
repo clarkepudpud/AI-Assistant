@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* FAQ */
+
+/*  General body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Font style */
+  background: #f5f5f5; /* Kulay ng background */
+}
+
+/*  Layout ng buong page: sidebar + chat area */
+.main-layout {
+  display: flex; /* Gamitin ang Flexbox layout */
+  height: 100vh; /* Buong taas ng screen */
+}
+
+/*  Sidebar (Suggested Questions) */
+.sidebar {
+  width: 250px;
+  background: #1e293b; /* Madilim na kulay para sa sidebar */
+  color: white;
+  padding: 20px;
+  overflow-y: auto; /* Scroll kapag sobrang haba ng laman */
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none; /* Alisin ang default na bullet points */
+  padding: 0;
+}
+
+/* 🟢 Button para sa mga tanong */
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #334155;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background: #475569; /* Hover effect */
+}
+
+/*  Chat container (chat UI) */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+}
+
+/* Chat title/header */
+.chat-container h1 {
+  margin-top: 0;
+}
+
+/* Chat messages area */
+.chatbox {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #fefefe;
+  display: flex;               /* layout */
+  flex-direction: column;      /* para vertical layout */
+  gap: 10px;                   /* dagdag space bawat message */
+}
+
+.chat-bubble {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+/*  Chat message bubbles */
+
+/* User (kanan) */
+.chat-bubble.user {
+  background: #dcf8c6;      /* Kulay ng user message */
+  align-self: flex-end;      /* pumunta sa kanan */
+  text-align: right;         /* text right-align din */
+  border-bottom-right-radius: 0;
+}
+
+/* Bot (kaliwa) */
+.chat-bubble.bot {
+  background: #e5e5ea;     /* Kulay ng bot message */
+  align-self: flex-start;    /* pumunta sa kaliwa */
+  text-align: left;
+  border-bottom-left-radius: 0;
+}
+
+/*  Input area: textbox at send button */
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  border: none;
+  background: #1e293b; /* Blue button */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*  Follow-up buttons (nasa ilalim ng bot message) */
+.follow-up-btn {
+  margin: 5px 5px 0 0;
+  padding: 6px 10px;
+  background: #cbd5e1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Override default section style for FAQ layout */
+.faq-layout {
+  all: unset; /* Reset all inherited styles */
+  display: block;
+  height: 100vh; /* Full screen height */
+  width: 100vw;  /* Full screen width */
+  margin: 0;
+  padding: 0;
+}
+
+/* Make sure .main-layout fills the section */
+.faq-layout .main-layout {
+  height: 100%;
+}
+
+/* 📱 Responsive layout for FAQ section (mobile and tablets) */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column; /* Sidebar sa taas, chat area sa baba */
+    height: auto; /* Hayaan mag-adjust ang height */
+  }
+
+  .sidebar {
+    width: 100%; /* Gawin buong lapad sa mobile */
+    padding: 15px;
+    max-height: 200px; /* Limit height para may scroll */
+    overflow-x: auto;
+  }
+
+  .chat-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .chatbox {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+ @media (max-width: 768px) {
+  .input-area {
+    flex-direction: row; /* ✔ Panatilihin na row layout kahit mobile */
+    align-items: center;
+  }
+
+  .input-area input {
+    flex: 1; /* ✔ Para sakupin ang natitirang space */
+  }
+
+  .input-area button {
+    flex-shrink: 0; /* ✔ Panatilihing maliit ang button */
+  }
+
+  .sidebar li {
+    font-size: 14px;
+    padding: 8px;
+  }
+ }
+
+}

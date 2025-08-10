@@ -1,115 +1,206 @@
+
+
+/* ===============================
+   [START] BODY Styling
+================================== */
 body {
+  font-family: sans-serif;
+  line-height: 1.6;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
-
-.main-layout {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 250px;
-  background: #1e293b;
-  color: white;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.sidebar h2 {
-  margin-top: 0;
-}
-
-.sidebar ul {
-  list-style: none;
   padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+/* ===============================
+   [END] BODY Styling
+================================== */
+
+/* ===============================
+   [START] HEADER Styling
+================================== */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
 }
 
-.sidebar li {
-  padding: 10px;
-  margin-bottom: 8px;
-  background: #334155;
-  cursor: pointer;
-  border-radius: 5px;
+/* Layout ng buong laman ng header */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px; /* ✅ ito ang naglalayo sa header-text at profile pic */
 }
 
-.sidebar li:hover {
-  background: #475569;
-}
-
-.chat-container {
-  flex: 1;
+/* ===============================
+   [HEADER TEXT: Pangalan, Title, Nav]
+================================== */
+.header-text {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  background: white;
-}
-
-.chat-container h1 {
-  margin-top: 0;
-}
-
-.chatbox {
+  justify-content: center;
   flex: 1;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  background: #fefefe;
-  display: flex;               /* ito ang importante */
-  flex-direction: column;      /* para vertical layout */
-  gap: 10px;                   /* dagdag space bawat message */
+  margin-right: 20px;
 }
 
-.chat-bubble {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  max-width: 80%;
+.header-text h1 {
+  margin: 0;
+  font-size: 28px;
 }
 
-.chat-bubble.user {
-  background: #dcf8c6;
-  align-self: flex-end;      /* pumunta sa kanan */
-  text-align: right;         /* text right-align din */
-  border-bottom-right-radius: 0;
+.header-text p {
+  margin: 5px 0 15px;
+  color: #ccc;
+  font-size: 16px;
 }
 
-.chat-bubble.bot {
-  background: #e5e5ea;
-  align-self: flex-start;    /* pumunta sa kaliwa */
-  text-align: left;
-  border-bottom-left-radius: 0;
+/* Clarke Pudpud link styling para magmukhang normal na text */
+.header-text h1 a {
+  color: inherit;            /* Gamitin ang color ng parent, which is white from the header */
+  text-decoration: none;    /* Alisin ang underline */
 }
 
-.input-area {
+.header-text h1 a:visited {
+  color: inherit;            /* Kapag na-click na, wag baguhin kulay */
+}
+
+/* Para hindi magmukhang link si <a> */
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.header-link:hover {
+  opacity: 0.9; /* Optional hover effect */
+}
+
+/* ===============================
+   [NAVIGATION Styling]
+================================== */
+.nav-menu {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.input-area input {
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   [PROFILE PICTURE Styling]
+================================== */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  overflow: hidden;
+  margin-left: 100px;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   [END] HEADER Styling
+================================== */
+
+/* ===============================
+   [SECTION Styling]
+================================== */
+section {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* ===============================
+   [LAYOUT SETUP - for sticky footer]
+================================== */
+
+/* Gumawa ng flex layout sa buong page */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper ng content para i-push ang footer sa baba */
+.page-wrapper {
   flex: 1;
+}
+
+/* ===============================
+   [FOOTER Styling]
+================================== */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
-.input-area button {
-  padding: 10px 15px;
-  border: none;
-  background: #1e293b;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+.blank-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  align-items: center;
 }
 
-.follow-up-btn {
-  margin: 5px 5px 0 0;
-  padding: 6px 10px;
-  background: #cbd5e1;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.blank-box {
+  width: 250px;
+  height: 200px;
+  background-color: #eee;
+  border: 2px dashed #bbb;
+  border-radius: 8px;
 }
+
+@media (max-width: 600px) {
+  .blank-box {
+    width: 90%;
+    height: 200px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    justify-content: center;
+  }
+
+  .header-text h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .header-text p {
+    text-align: center;
+  }
+}
+

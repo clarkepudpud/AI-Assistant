@@ -1,22 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My AI Assistant</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+  <head>
+    <!-- Basic settings sa page-->
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tittle ng tab sa browser -->
+     <title>Clarke Pudpud | Developer</title>
+    
+    <!-- link with css-->
+     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="ai.css" />
+
+  </head>
+ <body>
+    <!-- Wrapper para sa buong laman ng site maliban sa footer -->
+  <div class="">
+
+      <!-- HEADER section (pangalan at navigation menu) -->
+      <header>
+        <div class="header-content">
+
+            <!-- Profile Picture -->
+            <div class="profile-pic">
+              <img src="profile/74ba037f-06fd-4b14-8c14-ad9d81cab54d.jpg">
+            </div>
+
+          <!-- Text and Navigation -->
+          <div class="header-text">
+          <!-- Pangalan -->
+          <a href="#" id="homeBtn" class="header-link">
+            <h1>Clarke Pudpud</h1>
+            <p id="titleClick">Full-Stack AI Developer</p>
+          </a>
+          
+      <!-- Navigation menu (link to sections below)-->
+        <nav class="nav-menu">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        </div>
+        </div>
+      </header>
+
+      <!-- HOME section (default visible with 4 boxes)-->
+       <section id="home">
+        <div class="blank-container">
+          <div class="blank-box"></div>
+          <div class="blank-box"></div>
+          <div class="blank-box"></div>
+          <div class="blank-box"></div>
+          <div class="blank-box"></div>
+          <div class="blank-box"></div>
+        </div>
+       </section>
+
+    <!-- ABOUT section -->
+      <section id="about" style="display: none;">
+       <h2>About Me</h2>
+       <p>
+        I am Clarke Pudpud, an independent Full-Stack AI Developer
+        and creator of AC/ACI – an advanced multilingual AI chatbot capable of
+        understanding and responding in any language. I
+        specialize in building intelligent, secure, and user-friendly AI solutions
+        from the ground up, handling both the front-end for seamless user
+        interaction and the back-end for powerful, reliable AI processing.
+        <br></br>
+        Driven by innovation, I design and develop AI systems that are not only
+        functional but also highly adaptable for different platforms. My work on
+        AC/ACI reflects my passion for creating personalized and scalable AI
+        assistants that can help individuals and businesses improve
+        communication, productivity, and accessibility.
+        <br></p><br>
+        Whether working solo or collaborating with others, I approach every
+        project with precision, creativity, and the vision of bringing AI closer to
+        people’s daily lives.
+       </p>
+      </section>
+
+    <!-- SKILLS selection -->
+      <section id="projects" style="display: none;">
+        <h2>Projects</h2>
+        <ul>
+           
+        </ul>
+      </section>
+
+    <!-- EXPERIENCE section -->
+      <section id="experience" style="display: none;">
+        <h2>Experience</h2>
+        <ul>
+          
+        </ul>
+      </section>
+
+    <!-- CONTACT section -->
+     <section id="contact" style="display: none;">
+        <h2>Contact</h2>
+         <p>Email: <a href="mailto:clarkepudpud@gmail.com">clarkepudpud@gmail.com</a></p>
+      </section>
+
+     </div>
+
+    <!-- FAQ -->
+<section id="faq" class="faq-layout" style="display: none;">
   <div class="main-layout">
-    <!-- Left Side: Default Questions -->
+    <!-- Sidebar sa kaliwa: listahan ng suggested questions -->
     <div class="sidebar">
-      <h2>Suggested Questions</h2>
+      <h2>Suggested Questions:</h2>
       <ul id="question-buttons"></ul>
     </div>
 
-    <!-- Right Side: Chat Area -->
+    <!-- Chat area sa kanan: UI para sa user at bot interaction -->
     <div class="chat-container">
-      <h1>My AI Assistant</h1>
+      <h1>Chat with AC</h1>
       <div id="chatbox" class="chatbox"></div>
 
       <!-- Input Box -->
@@ -26,7 +126,18 @@
       </div>
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- FOOTER (copyright)-->
+     <footer id="siteFooter">
+      <p>&copy; 2025 Clarke Pudpud. All rights reserved.</p>
+     </footer>
+
+     <!-- I-link external JS files -->
+      <script src="script.js"></script>
+      <script src="ai.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.9.0/dist/tf.min.js"></script>
+      <script src="path/to/your/ai.js"></script>  <!-- Tiyakin na after ng tfjs -->
+
+ </body>
 </html>
